@@ -47,3 +47,33 @@ class Doctor extends Persona {
         System.out.println("===========================");
     }
 }
+
+
+class Deportista extends Persona {
+    private String deporte;
+    private double peso;
+
+    public Deportista(String nombre, int edad, String deporte, double peso) {
+        super(nombre, edad);
+        this.deporte = deporte;
+        this.peso = peso;
+    }
+
+    public String getDeporte() {
+        return deporte;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+
+    public void entrenar() {
+        System.out.println(deporte);
+    }
+
+    public void calcularIMC() {
+        double altura = 1.75;
+        double imc = peso / (altura * altura);
+        System.out.println("Mi IMC es: " + imc);
+    }
+}
