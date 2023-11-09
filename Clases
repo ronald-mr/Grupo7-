@@ -77,3 +77,21 @@ class Deportista extends Persona {
         System.out.println("Mi IMC es: " + imc);
     }
 }
+
+public class Master {
+    public static void main(String[] args) {
+        Doctor doctor = new Doctor("Jorge", 35, "Pediatria", 10);
+        doctor.saludar();
+        System.out.println("Especialidad " + doctor.getEspecialidad());
+        System.out.println("Años de experiencia " + doctor.getAñosExperiencia());
+        doctor.tratarPaciente();
+        doctor.realizarCirugia();
+
+        Deportista deportista = new Deportista("Marta", 28, "Futbol", 65.0);
+        deportista.saludar();
+        System.out.println("Deporte " + deportista.getDeporte());
+        System.out.println("Peso " + deportista.getPeso() + " kg");
+        deportista.entrenar();
+        deportista.calcularIMC();
+    }
+}
